@@ -1,0 +1,43 @@
+    TV App
+    
+    1.Open TV
+    2.Close TV
+    3.Volume
+    4.Add Channel
+    5.Channel Count
+    6.TV Inormation
+    
+    If you want exist, press "q"
+    
+
+    
+""")
+
+while True:
+    answer = input("Choose your answer:")
+    if (answer == "q"):
+        print("App is closing...")
+
+    elif (answer == "1"):
+        control.open_tv()
+    elif (answer == "2"):
+        control.close_tv()
+    elif (answer == "3"):
+        control.tv_vol()
+    elif (answer == "4"):
+        channel_names = input("Enter channel names separated by ',':")
+        channel_list = channel_names.split(",")
+        for adding in channel_list:
+            control.add_channel(adding)
+    elif (answer == "5"):
+        print("Channel Counts:",len(control))
+    elif (answer == "6"):
+        print(control)
+    else:
+        print("Invalid answer")
+
+
+
+
+
+
